@@ -19,7 +19,7 @@ use App\Http\Controllers\MainController;
 Route::get('/', [MainController::class, 'home']);
 
 // After login route
-Route::get('/logged', [MainController::class, 'logged']);
+Route::get('/logged', [MainController::class, 'logged']) -> middleware(['auth', 'verified']) -> name('logged');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
