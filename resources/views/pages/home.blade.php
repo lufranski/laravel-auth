@@ -2,7 +2,11 @@
 
 @section('content')
     
-    <h1>WELA'</h1>
+    {{-- diagonal welcome landing --}}
+    <section class="diagonal">
+
+        <h1>welcome.</h1>
+    </section>
 
     <a href="{{ route('logged')}}">
         <p>

@@ -1,9 +1,9 @@
 <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
     <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
-            <div class="logo_laravel" style="color: orange">
+            <div class="logo_laravel" style="color: black">
                 
-                <h4>federicoLufolio</h4>
+                <h4>federicoLufolio.</h4>
 
             </div>
             {{-- config('app.name', 'Laravel') --}}
