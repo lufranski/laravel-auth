@@ -18,18 +18,26 @@
         @foreach ($projects as $project)
             <li>
                 <h4>
-
+                    
                     {{ $project -> name }}
                 </h4>
-
+                
                 <p>
-                    {{ $project -> description }}
+                    {{ 
+                        $project -> description
+                        ? $project -> description
+                        : '- no description available -' 
+                    }}
                 </p>
                 
                 <h6>
                     Released:
                     {{ $project -> release_date }}
                 </h6>
+                
+                <a href="">
+                    Expand
+                </a>
             </li>
         @endforeach
     </ul>
