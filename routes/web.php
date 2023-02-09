@@ -30,6 +30,9 @@ Route::get('/project/create', [MainController::class, 'create']) -> name('projec
 // Store route
 Route::post('/project/store', [MainController::class, 'store']) -> name('project.store');
 
+// Edit route
+Route::get('/project/edit/{project}', [MainController::class, 'edit']) -> name('project.edit');
+
 // After login route
 Route::get('/logged', [MainController::class, 'logged']) -> middleware(['auth', 'verified']) -> name('logged');
 
