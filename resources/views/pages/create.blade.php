@@ -1,10 +1,15 @@
-@extends('pages.logged')
+@extends('layouts.main-layout')
 
-@section('create-form')
+@section('content')
 
 <form method="POST" action="{{ route('project.store')}}">
     
     @csrf
+
+    <section class="diagonal">
+
+        <h1>add.</h1>
+    </section>
 
     <label for="name">Project name.</label>
     <input type="text" name="name">

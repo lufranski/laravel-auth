@@ -28,7 +28,7 @@
             <h5>Add new project.</h5>
         </a>
 
-        @yield('create-form')
+        {{-- @yield('create-form') --}}
     </div>
 
 @endsection
