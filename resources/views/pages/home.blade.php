@@ -8,15 +8,11 @@
         <h1>welcome.</h1>
     </section>
 
-    {{-- <a href="{{ route('logged')}}">
-        <p>
-            Go to admin panel
-        </p>
-    </a> --}}
-
-    <ul>
+    <div class="d-flex justify-content-evenly">
         @foreach ($projects as $project)
-            <li>
+            <div class="ms_card">
+
+                <img src="{{$project -> main_image}}" alt="">
                 <h4>
                     
                     {{ $project -> name }}
@@ -38,8 +34,8 @@
                 <a href="{{ route('project.show', $project)}}">
                     Expand
                 </a>
-            </li>
+            </div>
         @endforeach
-    </ul>
+        </div>
 
 @endsection

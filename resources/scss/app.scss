@@ -28,3 +28,11 @@ a {
     transform: skewY(-5deg);
     z-index: -1;
 }
+
+.ms_card {
+    max-width: 300px;
+
+    img {
+        width: 100%;
+    }
+}
