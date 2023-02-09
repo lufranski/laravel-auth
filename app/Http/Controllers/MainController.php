@@ -19,4 +19,9 @@ class MainController extends Controller
 
         return view('pages.logged');
     }
+
+    public function show(Project $project){
+
+        return view ('pages.show', compact('project'));
+    }
 }
