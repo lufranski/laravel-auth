@@ -64,4 +64,9 @@ class MainController extends Controller
 
         return redirect() -> route('logged');
     }
+
+    public function edit(Project $project){
+
+        return view ('pages.edit', compact('project'));
+    }
 }
