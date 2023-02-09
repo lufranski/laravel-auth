@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\MainController;
 
-Route::get('/', [MainController::class, 'home']);
+Route::get('/', [MainController::class, 'home']) -> name('home');
 
 // Show route
 Route::get('/project/show/{project}', [MainController::class, 'show']) -> name('project.show');

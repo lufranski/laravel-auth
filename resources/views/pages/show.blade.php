@@ -1,6 +1,13 @@
 @extends('layouts.main-layout')
 
 @section('content')
+    
+    {{-- diagonal project landing --}}
+    <section class="diagonal">
+
+        <h1>discover project.</h1>
+    </section>
+
     <h3>{{ $project -> name }}</h3>
 
     <p>
