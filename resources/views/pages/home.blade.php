@@ -35,7 +35,7 @@
                     {{ $project -> release_date }}
                 </h6>
                 
-                <a href="">
+                <a href="{{ route('project.show', $project)}}">
                     Expand
                 </a>
             </li>
