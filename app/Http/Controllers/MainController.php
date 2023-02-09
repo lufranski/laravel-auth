@@ -17,11 +17,20 @@ class MainController extends Controller
 
     public function logged(){
 
-        return view('pages.logged');
+        $projects = Project::orderBy('created_at') -> get();
+
+        return view('pages.logged', compact('projects'));
     }
 
     public function show(Project $project){
 
         return view ('pages.show', compact('project'));
+    }
+
+    public function destroy(Project $project){
+
+        $project -> delete();
+
+        return redirect() -> route('home');
     }
 }
