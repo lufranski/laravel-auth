@@ -15,7 +15,7 @@
     <input type="text" name="name" value="{{$project -> name}}">
 
     <label for="description">Project description.</label>
-    <textarea name="description" cols="30" rows="10"></textarea value="{{ $project -> description }}">
+    <input type="text" name="description" value="{{ $project -> description }}">
 
     <label for="main_image">Project screenshot.</label>
     <input type="text" name="main_image" value="{{ $project -> main_image }}">

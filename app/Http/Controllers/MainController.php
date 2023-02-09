@@ -46,7 +46,7 @@ class MainController extends Controller
         $data = $request -> validate([
 
             'name' => 'required|unique:projects,name|string|max:64',
-            'description' => 'nullable|text',
+            'description' => 'nullable|string|max:255',
             'main_image' => 'required|unique:projects,main_image|string',
             'release_date' => 'required|date|before:tomorrow',
             'repo_link' => 'required|unique:projects,repo_link|string'
@@ -73,9 +73,9 @@ class MainController extends Controller
     public function update(Request $request, Project $project){
 
         $data = $request -> validate([
-            
+
             'name' => 'required|unique:projects,name|string|max:64',
-            'description' => 'nullable|text',
+            'description' => 'nullable|string|max:255',
             'main_image' => 'required|unique:projects,main_image|string',
             'release_date' => 'required|date|before:tomorrow',
             'repo_link' => 'required|unique:projects,repo_link|string'

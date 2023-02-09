@@ -15,7 +15,7 @@
     <input type="text" name="name">
 
     <label for="description">Project description.</label>
-    <textarea name="description" cols="30" rows="10"></textarea>
+    <input type="text" name="description">
 
     <label for="main_image">Project screenshot.</label>
     <input type="text" name="main_image">
