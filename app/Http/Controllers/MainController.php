@@ -31,7 +31,7 @@ class MainController extends Controller
 
         $project -> delete();
 
-        return redirect() -> route('home');
+        return redirect() -> route('logged');
     }
 
     public function create(){
