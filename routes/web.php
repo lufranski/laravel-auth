@@ -21,6 +21,9 @@ Route::get('/', [MainController::class, 'home']);
 // Show route
 Route::get('/project/show/{project}', [MainController::class, 'show']) -> name('project.show');
 
+// Destroy route
+Route::get('/project/delete/{project}', [MainController::class, 'destroy']) -> name('project.destroy');
+
 // After login route
 Route::get('/logged', [MainController::class, 'logged']) -> middleware(['auth', 'verified']) -> name('logged');
 
