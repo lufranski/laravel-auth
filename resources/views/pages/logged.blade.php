@@ -22,27 +22,13 @@
     </div>
 
     <div>
-        <h5>Add new project.</h5>
-
-        <form method="POST" action="">
         
-            <label for="name">Project name.</label>
-            <input type="text" name="name">
+        <a href="{{ route('project.create')}}">
 
-            <label for="description">Project description.</label>
-            <textarea name="description" cols="30" rows="10"></textarea>
+            <h5>Add new project.</h5>
+        </a>
 
-            <label for="main_image">Project screenshot.</label>
-            <input type="text" name="main_image">
-
-            <label for="release_date">Project released in.</label>
-            <input type="date" name="release_date">
-
-            <label for="repo_link">Project external link.</label>
-            <input type="text" name="repo_link">
-
-            <input type="submit" value="ADD">
-        </form>
+        @yield('create-form')
     </div>
 
 @endsection

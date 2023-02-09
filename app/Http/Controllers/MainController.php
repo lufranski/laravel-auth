@@ -33,4 +33,11 @@ class MainController extends Controller
 
         return redirect() -> route('home');
     }
+
+    public function create(){
+
+        $projects = Project::all();
+
+        return view ('pages.create', compact('projects'));
+    }
 }
