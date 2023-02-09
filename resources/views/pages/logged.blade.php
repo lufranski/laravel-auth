@@ -17,7 +17,7 @@
     
                     <a href="{{ route('project.destroy', $project)}}">DELETE</a>
 
-                    <a href="">EDIT</a>
+                    <a href="{{ route('project.edit', $project)}}">EDIT</a>
                 </li>
             @endforeach
         </ul>
