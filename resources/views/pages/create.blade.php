@@ -2,8 +2,10 @@
 
 @section('create-form')
 
-<form method="POST" action="">
-        
+<form method="POST" action="{{ route('project.store')}}">
+    
+    @csrf
+
     <label for="name">Project name.</label>
     <input type="text" name="name">
 
