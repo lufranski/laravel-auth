@@ -8,11 +8,11 @@
         <h1>welcome.</h1>
     </section>
 
-    <a href="{{ route('logged')}}">
+    {{-- <a href="{{ route('logged')}}">
         <p>
             Go to admin panel
         </p>
-    </a>
+    </a> --}}
 
     <ul>
         @foreach ($projects as $project)
