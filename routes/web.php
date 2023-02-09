@@ -27,6 +27,9 @@ Route::get('/project/delete/{project}', [MainController::class, 'destroy']) -> n
 // Create route
 Route::get('/project/create', [MainController::class, 'create']) -> name('project.create');
 
+// Store route
+Route::post('/project/store', [MainController::class, 'store']) -> name('project.store');
+
 // After login route
 Route::get('/logged', [MainController::class, 'logged']) -> middleware(['auth', 'verified']) -> name('logged');
 
