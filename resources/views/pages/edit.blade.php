@@ -2,7 +2,7 @@
 
 @section('content')
 
-<form method="POST" action="">
+<form method="POST" action="{{ route('project.update', $project)}}">
     
     @csrf
 
