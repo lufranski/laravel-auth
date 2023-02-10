@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Storage;
+
 use App\Models\Project;
 
 class MainController extends Controller
@@ -76,14 +78,16 @@ class MainController extends Controller
 
             'name' => 'required|string|max:64',
             'description' => 'nullable|string|max:255',
-            'main_image' => 'required|string',
+            'main_image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
             'release_date' => 'required|date|before:tomorrow',
             'repo_link' => 'required|string'
         ]);
 
+        $img_path = Storage::disk('public') -> put('main_image', $data['main_image']);
+
         $project -> name = $data['name'];
         $project -> description = $data['description'];
-        $project -> main_image = $data['main_image'];
+        $project -> main_image = $img_path;
         $project -> release_date = $data['release_date'];
         $project -> repo_link = $data['repo_link'];
 

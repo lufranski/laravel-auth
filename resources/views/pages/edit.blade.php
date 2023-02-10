@@ -2,7 +2,7 @@
 
 @section('content')
 
-<form method="POST" action="{{ route('project.update', $project)}}">
+<form method="POST" action="{{ route('project.update', $project)}}" enctype="multipart/form-data">
     
     @csrf
 
@@ -18,7 +18,7 @@
     <input type="text" name="description" value="{{ $project -> description }}">
 
     <label for="main_image">Project screenshot.</label>
-    <input type="text" name="main_image" value="{{ $project -> main_image }}">
+    <input type="file" name="main_image" value="{{ $project -> main_image }}">
 
     <label for="release_date">Project released in.</label>
     <input type="date" name="release_date" value="{{ $project -> release_date }}">
