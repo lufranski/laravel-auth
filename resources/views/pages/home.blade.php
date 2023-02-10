@@ -12,7 +12,7 @@
         @foreach ($projects as $project)
             <div class="ms_card">
 
-                <img src="{{ asset('storage/' . $project -> main_image) }}" alt="">
+                <img src="{{ asset('/storage/' . $project -> main_image) }}" alt="">
                 <h4>
                     
                     {{ $project -> name }}

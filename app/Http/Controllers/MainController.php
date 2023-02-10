@@ -83,11 +83,15 @@ class MainController extends Controller
             'repo_link' => 'required|string'
         ]);
 
-        $img_path = Storage::disk('public') -> put('main_image', $data['main_image']);
+        // $img_path = Storage::disk('public') -> put('main_image', $data['main_image']);
+        $img_path = Storage::put('uploads', $data['main_image']);
+        $data['main_image'] = $img_path;
+
 
         $project -> name = $data['name'];
         $project -> description = $data['description'];
-        $project -> main_image = $img_path;
+        // $project -> main_image = $img_path;
+        $project -> main_image = $data['main_image'];
         $project -> release_date = $data['release_date'];
         $project -> repo_link = $data['repo_link'];
 
